@@ -26,6 +26,7 @@ python most_active_cookie.py cook
 python most_active_cookie.py file.csv -d 2018-12-08
 python most_active_cookie.py
 python most_active_cookie.py -d 2020-03-05-09
+empty file
 '''
 
 # Judge whether a date is valid
@@ -78,7 +79,8 @@ def main(argv):
     # print('input_date: ', input_date)
     # print('filename: ', filename)
 
-    # Read the input csv file.
+    # Read the input csv file. Time consumption: O(k)~O(n) n is the amount of line in the file. k is the number of
+    # different cookies in the input day
     try:
         csv_reader = list(csv.reader(open(filename)))
         # If the date not in the file, we do not need to read the whole file.
@@ -93,7 +95,7 @@ def main(argv):
             cookie, date_time = list(line)
             date = date_time.split('T')[0]
 
-            # Generate the dictionary. Time consumption: O(n) n is the amount of line in the file.
+            # Generate the dictionary.
             if date == input_date:
                 if cookie in cookie_dic:
                     cookie_dic[cookie] += 1
