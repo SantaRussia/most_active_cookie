@@ -8,6 +8,24 @@ import csv
 Shan Hao
 
 Command: python most_active_cookie.py cookie_log.csv -d 2018-12-08
+
+Test Commands: 
+python most_active_cookie.py cookie_log.csv -d 2018-12-07
+python most_active_cookie.py cookie_log.csv -d 2018-12-08
+python most_active_cookie.py cookie_log.csv -d 2018-12-09
+python most_active_cookie.py cookie_log.csv -d 2000-12-08
+python most_active_cookie.py cookie_log.csv -d 2500-12-08
+python most_active_cookie.py cookie_log.csv -d 2018-02-29
+python most_active_cookie.py cookie_log.csv -d 2500-11-31
+python most_active_cookie.py cookie_log.csv -d 2018-1-4
+python most_active_cookie.py cookie_log.csv -d adfjoe
+python most_active_cookie.py cookie_log.csv -d 
+python most_active_cookie.py cookie_log.csv
+python most_active_cookie.py cookie_log.cs
+python most_active_cookie.py cook
+python most_active_cookie.py file.csv -d 2018-12-08
+python most_active_cookie.py
+python most_active_cookie.py -d 2020-03-05-09
 '''
 
 # Judge whether a date is valid
