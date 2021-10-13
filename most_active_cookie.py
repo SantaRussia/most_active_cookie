@@ -79,17 +79,18 @@ def main(argv):
     # print('input_date: ', input_date)
     # print('filename: ', filename)
 
-    # Read the input csv file. Time consumption: O(k)~O(n) n is the amount of line in the file. k is the number of
-    # different cookies in the input day
+    # Read the input csv file. 
     try:
         csv_reader = list(csv.reader(open(filename)))
-        # If the date not in the file, we do not need to read the whole file.
+        # If the date not in the file, we do not need to go in the iteration.
         max_date = csv_reader[1][1].split('T')[0]
         min_date = csv_reader[-1][1].split('T')[0]
         if input_date > max_date or input_date < min_date:
             return
         # cookie_dic {cookie: count}
         cookie_dic = {}
+        # Time consumption: O(k)~O(n) n is the amount of line in the file. k is the number of
+        # different cookies in the input day
         for line in csv_reader[1:]:
             # Get the cookie and the date of a line.
             cookie, date_time = list(line)
